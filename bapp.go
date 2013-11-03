@@ -99,7 +99,7 @@ func (b *Bapp) SetHandler(handler http.Handler) {
 	b.server.Handler = handler
 }
 
-// Stop stops the bapp instance.
+// Close stops the bapp instance.
 // false is returned when the bapp was already stopped
 func (b *Bapp) Close() bool {
 	_, ok := <-b.stopChan
